@@ -1,13 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm",
-    "analytics": false
-  },
   "newProjectRoot": "projects",
   "projects": {
-    "pipesApp": {
+    "heroesApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pipes-app",
+            "outputPath": "dist/heroes-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -64,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pipesApp:build:production"
+              "browserTarget": "heroesApp:build:production"
             },
             "development": {
-              "browserTarget": "pipesApp:build:development"
+              "browserTarget": "heroesApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pipesApp:build"
+            "browserTarget": "heroesApp:build"
           }
         },
         "test": {
@@ -91,16 +87,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/lara-dark-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "/node_modules/primeflex/primeflex.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "cd12bbd2-89bd-44ac-98f7-386b734b322b"
   }
 }
